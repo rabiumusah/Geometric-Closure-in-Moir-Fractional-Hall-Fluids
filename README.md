@@ -1,12 +1,12 @@
 # Geometric-Closure-in-Moir-Fractional-Hall-Fluids
-An exact intraband selection rule exposes the limits of geometric closure in moiré fractional Hall fluids M. Rabiu, S. S. Abukari
-and M. Amekewu 
-This archive contains all code, parameter files and raw result arrays behind every figure, table and quoted number of the article and
-its Supplemental Material, together with the LaTeX sources. 
-Quick start 
-./reproduce.sh./reproduce.sh./reproduce.sh
-testlightfull# unit tests of the sewn non-Abelian Chern-number routine (a few minutes)
-# regenerate all tables, figures, numbers and both PDFs from stored results (minutes)
-# rerun every calculation first (15-20 core-hours on two cores), then 'light'
-Requirements: Python 3.10+, numpy, scipy, numba, joblib, matplotlib; pdflatex with REVTeX 4.2. SHA256SUMS.txt lists checksums
-of the 322 files under code/ (verify with sha256sum -c SHA256SUMS.txt). 
+An exact intraband selection rule exposes the limits of geometric closure in moiré fractional Hall fluids M. Rabiu
+
+It contains every script, parameter file (specs2.json, partners.json, match_out.json, registry.json),
+the unit tests, the build scripts and reproduce.sh, but not the stored raw results (code/res2, res2x, res3,
+res4 and the *.pkl caches, about 26 MB) or the manuscript sources.
+
+  ./reproduce.sh test   works as is (unit tests of the non-Abelian Chern routine).
+  ./reproduce.sh full   recomputes all raw results (15-20 core-hours); to also rebuild the PDFs, copy the
+                        manuscript sources (build/*.tex, build/fig, build/numbers.json) from the full archive.
+  ./reproduce.sh light  needs the stored results: use the full archive fqah-closure-v1.1-prx.zip instead.
+  python3 code/llval.py reproduces Table S2 / Fig. S1 from scratch in about a minute (writes into build/).
