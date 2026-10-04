@@ -10,3 +10,5 @@ res4 and the *.pkl caches, about 26 MB) or the manuscript sources.
                         manuscript sources (build/*.tex, build/fig, build/numbers.json) from the full archive.
   ./reproduce.sh light  needs the stored results: use the full archive fqah-closure-v1.1-prx.zip instead.
   python3 code/llval.py reproduces Table S2 / Fig. S1 from scratch in about a minute (writes into build/).
+
+[![DOI](https://zenodo.org/badge/1403816950.svg)](https://doi.org/10.5281/zenodo.23130957)
